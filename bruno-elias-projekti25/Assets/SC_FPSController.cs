@@ -32,6 +32,9 @@ public class SC_FPSController : MonoBehaviour
 
     void Update()
     {
+
+        Debug.Log("" + moveDirection);
+
         // We are grounded, so recalculate move direction based on axes
         Vector3 forward = transform.TransformDirection(Vector3.forward);
         Vector3 right = transform.TransformDirection(Vector3.right);
