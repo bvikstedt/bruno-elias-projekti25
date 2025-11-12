@@ -1,18 +1,36 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class Timer : MonoBehaviour
+using UnityEngine.UI;
+using System;
+using TMPro;
+using UnityEngine.SceneManagement;
+ 
+public class TimerScript : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public TMP_Text txtTime;
+    public float currentTime = 0f;
+    public float startingTime = 60f;
+    public bool timerActive = true;
+    public RoundSystem roundSystem;
+
     void Start()
     {
-        
+        currentTime = startingTime;
     }
-
-    // Update is called once per frame
+ 
     void Update()
     {
-        
+        if(timerActive == true)
+        {
+            currentTime -= 1 * Time.deltaTime;
+            txtTime.text = "" + Math.Round(currentTime);
+            if (currentTime <= 0)
+            {
+                roundSystem.RoundOver();
+                timerActive = false;
+                roundSystem.roundOver = true;
+            }
+        } 
     }
 }

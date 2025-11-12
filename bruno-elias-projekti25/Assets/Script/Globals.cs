@@ -7,6 +7,8 @@ public class Globals : MonoBehaviour
 
     public static int player1Score = 0;
     public static int player2Score = 0;
+    public static int player1OverallScore = 0;
+    public static int player2OverallScore = 0;
 
     // Start is called before the first frame update
     void Start()
