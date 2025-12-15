@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class RoundSystem : MonoBehaviour
 {
@@ -21,6 +22,8 @@ public class RoundSystem : MonoBehaviour
         {
             Globals.player2OverallScore ++;
         }
+
+        SceneManager.LoadScene("RandomMinigame");
         
     }
 
