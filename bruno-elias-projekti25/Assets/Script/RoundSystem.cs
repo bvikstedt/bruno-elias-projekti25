@@ -12,6 +12,12 @@ public class RoundSystem : MonoBehaviour
 
     public bool roundOver = false;
 
+    public void Start() 
+    {
+        Globals.player1Score = 0;
+        Globals.player2Score = 0;
+    }
+
     public void RoundOver() 
     {
         if(Globals.player1Score > Globals.player2Score)
